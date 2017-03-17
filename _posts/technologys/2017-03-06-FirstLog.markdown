@@ -1,0 +1,63 @@
+---
+layout: post
+title:  "第一篇,如何在github上写博客"
+date:   2017-03-06 17:05:13 +0000
+category: tech
+---
+很多年前在百度空间写过点东西,结果遇到一次改版后就没继续了. 现在又重新想写点啥.
+第一篇就github上如何用jekyll建立一个博客好了.毕竟才研究过.
+
+先说说这么做的好处:
+
+1.免费的
+
+2.github本身就可以很好的管理代码,不怕遗失
+
+3.不会因为和谐因素吞你的文章,或者敏感词发不出去
+
+基础是必须有一个github账号,我本身就有,没有需要先[注册][register-github]一个.
+
+如果从头安装github客户端的话很辛苦,因为网速慢啊,挂VPN也没用,这里推荐一个[离线安装包][offline-github].
+
+我最先是看了[三分钟在github上架好博客][blog-3min]然后花了几分钟先弄了一个看看, 再去研究原理.
+
+果然3分钟搞定. https://xjhfox.github.io  直接就是博客了,  xjhfox是我的username,每个人账号不一样这个就不同. 
+
+---
+
+下面从头开始研究:
+
+首先需要了解的就是 [Github Page][git-page] ,  是一个github提供的,用来显示用户自己编写的静态网页的功能. 但是不是单纯的上传html,而是经过jekyll处理后自动生成.
+
+那么[jekyll][Jekyll docs]是什么呢?  jekyll是一个静态站点生成器，它会根据网页源码生成静态文件.
+所以整个过程就是,你在本地用jekyll写出符合jekyll规范的文档,上传到github,github通过一个转换器生成静态网站,并显示出来.
+所以说,为了写这个博客,还需要安装一个jekyll. 而jekyll又依赖ruby,要先装ruby......
+
+
+下面直接列出在**windows平台**上安装全部过程:
+
+1:下载[rubyinstallers][ruby-download] 和 [DEVELOPMENT KIT][ruby-download],这2个在一个页面里.
+
+2:windows下直接运行rubyinstallers 安装. Add Ruby executables to your PATH 必勾.
+
+3:解压DEVELOPMENT KIT,进入命令行模式,进入解压后的目录,输入**ruby dk.rb init**, 之后会生成**config.yml文件**
+
+打开文件,按里面的格式添加2个路径,路径为自己ruby的安装目录,然后执行**ruby dk.rb install**
+
+![config_yml]({{ site.url }}/assets/devkit.png)
+
+4:安装完后,命令行输入:**gem install jekyll**, 自动安装jekyll , **gem install jekyll bundler** ,接着安装bundler
+
+5:现在输入命令 **jekyll new your_awesome_site** 创建你的本地博客了, 在your_awesome_site中就会自动生成一个最原始的博客版本
+
+6:cd your_awesome_site, 然后输入 **jekyll serve**, 就可以在游览器上http://127.0.0.1:4000/上预览博客内容了,当你修改完成后,pull到github 就一切OK了.
+
+![ok]({{ site.url }}/assets/jekyllserve.png)
+
+
+[register-github]: https://github.com/
+[ruby-download]: https://rubyinstaller.org/downloads/
+[offline-github]: https://link.zhihu.com/?target=http%3A//www.yaozeyuan.online/%3Fp%3D104
+[Jekyll docs]: https://jekyllrb.com/
+[git-page]: https://pages.github.com/
+[blog-3min]: https://lizer.github.io/2017/03/03/%E4%B8%89%E5%88%86%E9%92%9F%E5%9C%A8github%E4%B8%8A%E6%9E%B6%E5%A5%BD%E5%8D%9A%E5%AE%A2.html
