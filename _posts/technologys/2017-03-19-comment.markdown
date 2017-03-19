@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "jekyll生成的博客上用intensedebate增加评论功能"
-date:   2017-03-18 19:05:13 +0000
+date:   2017-03-19 19:05:13 +0000
 category: tech
 ---
 
