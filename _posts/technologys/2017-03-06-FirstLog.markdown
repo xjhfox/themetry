@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "第一篇,如何在github上写博客"
 date:   2017-03-06 17:05:13 +0000
 category: tech
@@ -54,6 +53,9 @@ category: tech
 
 ![ok]({{ site.url }}/assets/jekyllserve.png)
 
+{% if site.intensedebate_comments %}
+  {% include intensedebate-comments.html %}
+{% endif %}
 
 [register-github]: https://github.com/
 [ruby-download]: https://rubyinstaller.org/downloads/

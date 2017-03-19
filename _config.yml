@@ -21,7 +21,10 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  xjhfox
 
+intensedebate_comments: true
+
 # Build settings
+
 markdown: kramdown
 theme: minima
 gems:
@@ -35,3 +38,4 @@ defaults:
       path: ""
     values:
       author: "xjhfox"
+      layout: "default"
