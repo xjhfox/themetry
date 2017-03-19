@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "jekyll生成的博客上用intensedebate增加评论功能"
+date:   2017-03-18 19:05:13 +0000
+category: tech
+---
+
+使用 [**intensedebate**][intensedebate]增加了评论功能,因为推荐的Disqus被墙了国内连不上,这个国内可以用.
+
+1.注册
+2.在intensedebate上安装,指定自己的博客地址并获取对应的script, 如图
+![tu]({{ site.url }}/assets/install_intensedebate.png)
+
+3.在site的根目录新建一个 _includes 文件夹,里面新建一个intensedebate-comments.html文件, 文件里复制第二步获得的script代码.
+
+4.在编写博客的markdown文件最后添加 **include intensedebate-comments.html**, 这样自动生成的文件后面就会带上评论功能了.
+
+
+---
+
+{% if site.intensedebate_comments %}
+  {% include intensedebate-comments.html %}
+{% endif %}
+
+[intensedebate]: https://intensedebate.com/
+
