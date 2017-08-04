@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Audio Clip Import Settings"
-date:   2017-03-16 19:05:13 +0000
+date:   2017-04-17 19:05:13 +0000
 category: tech
 ---
 做的项目里才刚开始,几个音乐,就发现占用了100MB的内存....
