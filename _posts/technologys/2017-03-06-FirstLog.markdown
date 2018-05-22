@@ -53,6 +53,8 @@ category: tech
 
 ![ok]({{ site.url }}/assets/jekyllserve.png)
 
+最后 **jekyll build --verbose** 可以生产网页并打印详细信息,当生产页面失败时候,可以用这个命令查找失败原因.
+
 {% if site.intensedebate_comments %}
   {% include intensedebate-comments.html %}
 {% endif %}
